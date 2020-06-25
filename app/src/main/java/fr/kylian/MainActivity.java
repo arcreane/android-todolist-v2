@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void readItems() {
         File filesDir = getFilesDir();
-        File todoFile = new File(filesDir, "todo.txt");
+        File todoFile = new File(filesDir, "todoList.txt");
         try {
             items = new ArrayList<String>(FileUtils.readLines(todoFile));
         } catch (IOException e) {
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void writeItems() {
         File filesDir = getFilesDir();
-        File todoFile = new File(filesDir, "todo.txt");
+        File todoFile = new File(filesDir, "todoList.txt");
         try {
             FileUtils.writeLines(todoFile, items);
         } catch (IOException e) {
